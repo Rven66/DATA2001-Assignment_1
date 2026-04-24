@@ -1,0 +1,103 @@
+This just means **Jupyter isn’t installed in your current environment (or not on PATH).**
+
+You already have a `conda` setup, so do this cleanly.
+
+---
+
+## Step 1 — activate your environment
+
+You mentioned `ds`, so:
+
+```bash
+conda activate ds
+```
+
+---
+
+## Step 2 — check if Jupyter exists
+
+```bash
+which jupyter
+```
+
+If nothing prints → not installed in this env.
+
+---
+
+## Step 3 — install it (inside `ds`)
+
+Since your `environment.yml` included it, but maybe wasn’t applied:
+
+```bash
+conda install jupyterlab
+```
+
+or (faster alternative):
+
+```bash
+pip install jupyterlab
+```
+
+---
+
+## Step 4 — run it
+
+```bash
+jupyter lab
+```
+
+---
+
+## If you want the proper “group setup” (important)
+
+Instead of installing manually, you should really sync the env:
+
+```bash
+conda env update -f environment.yml --prune
+```
+
+This ensures:
+
+* everyone has same packages
+* avoids “works on my machine” issues
+
+---
+
+## Quick diagnosis shortcut
+
+Run:
+
+```bash
+conda activate ds
+conda list | grep jupyter
+```
+
+---
+
+## Most likely issue
+
+You:
+
+* created env OR pulled repo
+* but didn’t install dependencies
+
+---
+
+## Minimal mental model
+
+```text
+conda env = isolated Python world
+jupyter must exist inside that world
+```
+
+---
+
+If it still fails, paste:
+
+```bash
+conda info --envs
+which python
+```
+
+and I’ll pinpoint it immediately.
+
