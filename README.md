@@ -1,8 +1,12 @@
 # DATA2001-Assignment_1
 
+# API Task 2
+Link to the API website: https://datasets.seed.nsw.gov.au/dataset/nsw-points-of-interest-poi
+
+# Google drive - Doc for report link
+https://docs.google.com/document/d/1n2X06f8SsJrVs9xzTqE0d5J3EYx_cJwz28PFvmnBcf0/edit?usp=sharing
 
 # TEMP SETUP HELP
-
 
 ## Full setup:
 
@@ -14,6 +18,16 @@
    jupyter lab
 3. In Jupyter, select kernel: Python (ds)
 ```
+
+# Every time you work on the file (after completing SETUP below)
+
+In terminal in the assignment directory:
+
+```bash
+conda activate ds
+jupyter lab
+```
+
 
 ## Steps:
 
