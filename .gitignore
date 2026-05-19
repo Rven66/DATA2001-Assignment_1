@@ -15,5 +15,5 @@ venv/
 
 # Editor
 .vscode/
-.png
-.jpg
+*.png
+*.jpg
